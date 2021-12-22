@@ -274,7 +274,7 @@ ul li a:hover{
     height: 100%;
     border-radius: 20% 0 20% 0;
     border: 6px solid rgb(0, 0, 0);
-    top: 3.3%;
+    top: 3.9%;
     left: -20%;
     z-index: -1;
     animation: Bore 2s forwards infinite alternate;
@@ -303,6 +303,23 @@ ul li a:hover{
     }
 }
 
+.home .colorThree{
+    position: absolute;
+    width: 5%;
+    height: 200vh;
+    top: -10%;
+    z-index: -2;
+}
+
+@keyframes lilo {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 200vh;
+    }
+}
+
 
 
 .home p{
@@ -317,7 +334,7 @@ ul li a:hover{
     padding: 10px 50px;
     transition: 0.4s;
     position: relative;
-    border: 2px solid #7DF2AB;
+    border: 2px solid black;
 }
 .home .cnt::after{
     content: '';
@@ -355,6 +372,7 @@ ul li a:hover{
     font-weight: bold;
     color: black;
 }
+
 .MySkills footer {
     background: gray;
 
@@ -391,10 +409,18 @@ ul li a:hover{
     }
 }
 
-.project img {
-    border-radius: 5px;;
+.project {
+    position: relative;
 }
-
+.project .color4{
+    position: absolute;
+    width: 13%;
+    height: 100%;
+    z-index: -2;
+    background:linear-gradient(#7DF2AB 70%,#969696);
+    top: 5%;
+    left: 43.4%;
+}
 
 .project .roomm {
     position: relative;
@@ -402,7 +428,6 @@ ul li a:hover{
 }
 .project .roomm img {
     transition: all 0.4s;
-    border-radius: 5px;
 }
 .project .roomLink {
     position: absolute;
@@ -435,8 +460,6 @@ ul li a:hover{
 }
 .project .nike img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .nikeLink {
     position: absolute;
@@ -471,8 +494,6 @@ ul li a:hover{
 }
 .project .forten img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .fortenLink {
     position: absolute;
@@ -505,8 +526,6 @@ ul li a:hover{
 }
 .project .muncim img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .muncimLink {
     position: absolute;
@@ -541,8 +560,6 @@ ul li a:hover{
 }
 .project .xzone img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .xzoneLink {
     position: absolute;
@@ -576,8 +593,6 @@ ul li a:hover{
 }
 .project .dude img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .dudeLink {
     position: absolute;
@@ -612,7 +627,6 @@ ul li a:hover{
 }
 .project .coffee img {
     transition: all 0.4s;
-    border-radius: 5px;
 
 }
 .project .coffeeLink {
@@ -648,8 +662,6 @@ ul li a:hover{
 }
 .project .kk img {
     transition: all 0.4s;
-    border-radius: 5px;
-
 }
 .project .kkLink {
     position: absolute;
@@ -706,6 +718,10 @@ ul li a:hover{
             box-shadow: 0 0 15px #afd1bd;
 
         }
+    }
+    .project .color4 {
+        width: 40%;
+        left: 30%;
     }
 }
 
