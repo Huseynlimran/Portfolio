@@ -13,9 +13,11 @@
     box-sizing: border-box;
     font-family: var(--fontFamily) ;
 }
+
 html {
     overflow-x: hidden;
 }
+
 body {
     background:#969696;
     background-repeat: no-repeat;
@@ -231,7 +233,7 @@ ul li a:hover{
 
 .toggle .line1 {
     transform: translateX(10px);
-    background: white;
+    background-color: white;
 }
 .toggle .line2 {
     transform: translateX(10px);
@@ -272,7 +274,7 @@ ul li a:hover{
     height: 100%;
     border-radius: 20% 0 20% 0;
     border: 6px solid rgb(0, 0, 0);
-    top: 3.8%;
+    top: 3.3%;
     left: -20%;
     z-index: -1;
     animation: Bore 2s forwards infinite alternate;
@@ -381,11 +383,11 @@ ul li a:hover{
 }
 @keyframes anime {
     from {
-        width: 30%;
+        width: 40%;
     }
     
     to {
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -396,14 +398,17 @@ ul li a:hover{
 
 .project .roomm {
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+.project .roomm img {
+    transition: all 0.4s;
+    border-radius: 5px;
 }
 .project .roomLink {
     position: absolute;
     top:0% ;
     left: 0%;
     background-color: rgba(0, 0, 0, 0.514);
-    border-radius: 5px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -411,24 +416,33 @@ ul li a:hover{
     align-items: center;
     text-decoration: none;
     color: white;
-    transform: translateY(12em);
+    opacity: 0;
+    transform: scale(0.1);  
     transition: all 0.5s;
 }
 .project .roomm:hover .roomLink{
-    transform: translateY(0em);
+    opacity: 1;
+    transform: scale(1);  
     
+}
+.project .roomm:hover img{
+    transform: scale(1.1);
 }
 
 .project .nike {
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+.project .nike img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
 }
 .project .nikeLink {
     position: absolute;
     top:0% ;
     left: 0%;
     background-color: rgba(0, 0, 0, 0.514);
-    border-radius: 5px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -436,17 +450,29 @@ ul li a:hover{
     align-items: center;
     text-decoration: none;
     color: white;
-    transform: translateY(12em);
+    transform: scale(0.1);
+    opacity: 0;
     transition: all 0.5s;
 }
 .project .nike:hover .nikeLink{
-    transform: translateY(0em);
+    transform: scale(1);
+    opacity: 1;
+    
+}
+.project .nike:hover img{
+    transform: scale(1.1);
     
 }
 
+
 .project .forten {
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+.project .forten img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
 }
 .project .fortenLink {
     position: absolute;
@@ -456,22 +482,31 @@ ul li a:hover{
     width: 100%;
     height: 100%;
     display: flex;
-    border-radius: 5px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    opacity: 0;
     color: white;
-    transform: translateY(12em);
+    transform: scale(0.1);
     transition: all 0.5s;
 }
 .project .forten:hover .fortenLink{
-    transform: translateY(0em);
+    opacity: 1;
+    transform: scale(1);  
+}
+.project .forten:hover img{
+    transform: scale(1.1);
     
 }
 
 .project .muncim {
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+.project .muncim img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
 }
 .project .muncimLink {
     position: absolute;
@@ -481,24 +516,172 @@ ul li a:hover{
     width: 100%;
     height: 100%;
     display: flex;
-    border-radius: 5px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
-    transform: translateY(12em);
+    opacity: 0;
+    transform: scale(0.3);  
     transition: all 0.5s;
 }
 .project .muncim:hover .muncimLink{
-    transform: translateY(0em);
+    opacity: 1;
+    transform: scale(1);  
+    
+}
+
+.project .muncim:hover img{
+    transform: scale(1.1);
+    
+}
+
+.project .xzone {
+    position: relative;
+    overflow: hidden;
+}
+.project .xzone img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
+}
+.project .xzoneLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transform: scale(0.3);  
+    transition: all 0.5s;
+}
+.project .xzone:hover .xzoneLink{
+    opacity: 1;
+    transform: scale(1);  
+    
+}
+
+.project .xzone:hover img{
+    transform: scale(1.1);
+    
+}
+.project .dude {
+    position: relative;
+    overflow: hidden;
+}
+.project .dude img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
+}
+.project .dudeLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transform: scale(0.3);  
+    transition: all 0.5s;
+}
+.project .dude:hover .dudeLink{
+    opacity: 1;
+    transform: scale(1);  
+    
+}
+
+.project .dude:hover img{
+    transform: scale(1.1);
+    
+}
+
+.project .coffee {
+    position: relative;
+    overflow: hidden;
+}
+.project .coffee img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
+}
+.project .coffeeLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transform: scale(0.3);  
+    transition: all 0.5s;
+}
+.project .coffee:hover .coffeeLink{
+    opacity: 1;
+    transform: scale(1);  
+    
+}
+
+.project .coffee:hover img{
+    transform: scale(1.1);
+    
+}
+
+.project .kk {
+    position: relative;
+    overflow: hidden;
+}
+.project .kk img {
+    transition: all 0.4s;
+    border-radius: 5px;
+
+}
+.project .kkLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transform: scale(0.3);  
+    transition: all 0.5s;
+}
+.project .kk:hover .kkLink{
+    opacity: 1;
+    transform: scale(1);  
+    
+}
+
+.project .kk:hover img{
+    transform: scale(1.1);
     
 }
 
 
 
 
-@media (max-width:1024px){
-
+@media (max-width:700px){
     .home .color {
         width: 90%;
         border-color: rgba(0, 0, 0, 0.685);
@@ -517,7 +700,7 @@ ul li a:hover{
     @keyframes color2 {
         from{
             transform: scale(1.1) translateY(10%);
-            box-shadow: 0 0 35px #7DF2AB;
+            box-shadow: 0 0 15px #7DF2AB;
         }
         to {
             box-shadow: 0 0 15px #afd1bd;
