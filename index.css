@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+
+:root {
+    --firstColor : black;
+    --BrandColor: #7DF2AB;
+    --H1fontSize:2em;
+    --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily) ;
+}
+
+body {
+    background:#969696;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #7DF2AB;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid #7DF2AB;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur(2.3px );
+}
+
+.logo {
+    font-size: 34px;
+    text-decoration: none;
+    color: var(--firstColor);
+    font-weight: bold;
+}
+.logo:hover{
+    color: var(--firstColor);
+}
+.logo span {
+    color: var(--BrandColor);
+    font-weight: bold;
+    font-size: 44px;
+}
+.logoMini {
+    display: none;
+}
+
+ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+ul li {
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    color: var(--firstColor);
+    font-weight: 600;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    position: relative;
+}
+ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #64B5F6;
+    width: 0%;
+    height: 0px;
+    transition:all 0.4s;
+}
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    background-color: var(--firstColor);
+    width: 0%;
+    height: 0px;
+    transition: all 0.4s;
+}
+ul li a:hover::before{
+    width: 50%;
+    height: 3px;
+}
+ul li a:hover::after{
+    width: 50%;
+    height: 3px;
+}
+
+ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+
+}
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--firstColor);
+    margin: 7px 0;
+    transition:all 0.4s ease-in-out;
+}
+
+@media (max-width:800px){
+    nav {
+        justify-content: space-between;
+        padding: 0 1.8em;
+    }
+    nav ul{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 10vh;
+        right: 0px;
+        width: 50%;
+        height: 90vh;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in-out;
+        background-color: #969696d8;
+    }
+    .burger {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+    .logoMini{
+        display: block;
+        text-decoration: none;
+        font-size: 3em;
+        color: var(--BrandColor);
+        font-weight: bold;
+        transition: all 0.4s;
+    }
+    .logoMini span {
+        color: rgba(0, 0, 0, 0.76);
+        font-style: italic;
+    }
+    .logoMini:hover{
+        color: black;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: translateX(10px);
+}
+.toggle .line2 {
+    transform: translateX(10px);
+    width: 14px;
+}
+.toggle .line3 {
+    transform: translateX(-10px);
+}
+
+
+
+.home h1{
+    color: var(--firstColor);
+}
+.home h1 span {
+    font-weight: bold;
+    color: var(--BrandColor);
+    animation: anime2 2s forwards infinite alternate;
+}
+
+@keyframes anime2 {
+    from{
+        color: white;
+    }
+     to{
+         color:var(--BrandColor);
+     }
+}
+
+.home {
+    height: 120vh;
+    position: relative;
+}
+.home .color {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    border-radius: 20% 0 20% 0;
+    border: 6px solid rgb(0, 0, 0);
+    top: 3.3%;
+    left: -20%;
+    z-index: -1;
+    animation: Bore 2s forwards infinite alternate;
+}
+@keyframes Bore {
+    from{ 
+        border-radius: 20% 0 40% 0;
+    }
+    to {
+        border-radius: 20% 0 70% 0;
+
+    }
+}
+
+
+
+.home p{
+    font-size: 1.5em;
+    color: var(--BrandColor);
+}
+
+.home .cnt{
+    text-decoration: none;
+    color: var(--firstColor);
+    font-size: 1.5em;
+    padding: 10px 50px;
+    transition: 0.4s;
+    position: relative;
+    border: 2px solid #7DF2AB;
+}
+.home .cnt::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 0;
+    height: 100%;
+    background: var(--BrandColor);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+.home .cnt:hover::after{
+    width: 100%;
+    color: black;
+}
+
+.home {
+    position: relative;
+}
+
+.home i {
+    font-size: 3em;
+    color: var(--firstColor);
+    margin: 10px 10px;
+    transition: 0.4s;
+}
+
+.home i:hover{
+    color: rgb(194, 194, 194);
+    padding-right: 10px;
+}
+.MySkills span {
+    font-weight: bold;
+    color: black;
+}
+.MySkills footer {
+    background: gray;
+
+}
+
+.MySkills .faiz {
+    width: 80%;
+    height: 4px;
+    background: #7DF2AB;
+}
+.MySkills .faiz2 {
+    width: 90%;
+    height: 4px;
+    background: red;
+}
+.MySkills .faiz3 {
+    width: 70%;
+    height: 4px;
+    background: rgb(255, 255, 255);
+}
+.MySkills .faiz4 {
+    width: 30%;
+    height: 4px;
+    background: black;
+}
+
+.project img {
+    border-radius: 5px;;
+}
+
+
+.project .roomm {
+    position: relative;
+    overflow-y: hidden;
+}
+.project .roomLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transform: translateY(12em);
+    transition: all 0.5s;
+}
+.project .roomm:hover .roomLink{
+    transform: translateY(0em);
+    
+}
+
+.project .nike {
+    position: relative;
+    overflow-y: hidden;
+}
+.project .nikeLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transform: translateY(12em);
+    transition: all 0.5s;
+}
+.project .nike:hover .nikeLink{
+    transform: translateY(0em);
+    
+}
+
+.project .forten {
+    position: relative;
+    overflow-y: hidden;
+}
+.project .fortenLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transform: translateY(12em);
+    transition: all 0.5s;
+}
+.project .forten:hover .fortenLink{
+    transform: translateY(0em);
+    
+}
+
+.project .muncim {
+    position: relative;
+    overflow-y: hidden;
+}
+.project .muncimLink {
+    position: absolute;
+    top:0% ;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transform: translateY(12em);
+    transition: all 0.5s;
+}
+.project .muncim:hover .muncimLink{
+    transform: translateY(0em);
+    
+}
+
+
+
+
+@media (max-width:700px){
+    .home .color {
+        border-color: rgba(0, 0, 0, 0.685);
+    }
+}
+
