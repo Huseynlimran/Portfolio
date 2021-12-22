@@ -35,7 +35,7 @@ const cursor = document.querySelector('.cursor');
             origin: 'right' , duration: 2000, distance: '5rem',  interval:300, opacity : 0
         })
         ScrollReveal().reveal('.sol',{
-            origin: 'left' , duration: 2000, distance: '1rem',  interval:300, opacity : 0
+            origin: 'left' , duration: 1000, distance: '1rem',  interval:200, opacity : 0
         })
 
 
