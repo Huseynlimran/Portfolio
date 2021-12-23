@@ -829,5 +829,13 @@ nav ul li a:hover{
         color: var(--firstColor);
         padding: 1em 1em;
     }
+    @keyframes ss {
+        from{
+            transform: translateY(0%) translateX(400%);
+        }
+        to {
+            transform: translateY(100%) rotate(360deg);
+        }
+    }
 }
 
