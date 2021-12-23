@@ -20,8 +20,7 @@ html {
 
 body {
     background:#969696;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -119,17 +118,17 @@ nav {
     display: none;
 }
 
-ul {
+nav ul {
     width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 0;
 }
-ul li {
+nav ul li {
     list-style: none;
 }
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: var(--firstColor);
     font-weight: 600;
@@ -137,7 +136,7 @@ ul li a {
     letter-spacing: 2px;
     position: relative;
 }
-ul li a::after{
+nav ul li a::after{
     content: '';
     position: absolute;
     bottom: -8px;
@@ -148,7 +147,7 @@ ul li a::after{
     transition:all 0.4s;
 }
 
-ul li a::before{
+nav ul li a::before{
     content: '';
     position: absolute;
     bottom: -8px;
@@ -158,16 +157,16 @@ ul li a::before{
     height: 0px;
     transition: all 0.4s;
 }
-ul li a:hover::before{
+nav ul li a:hover::before{
     width: 50%;
     height: 3px;
 }
-ul li a:hover::after{
+nav ul li a:hover::after{
     width: 50%;
     height: 3px;
 }
 
-ul li a:hover{
+nav ul li a:hover{
     color: rgb(255, 255, 255);
 }
 
@@ -368,6 +367,7 @@ ul li a:hover{
     color: rgb(194, 194, 194);
     padding-right: 10px;
 }
+
 .MySkills span {
     font-weight: bold;
     color: black;
@@ -689,9 +689,106 @@ ul li a:hover{
     transform: scale(1.1);
     
 }
+.about .sd {
+    position: relative;
+    z-index: 999999;
+    box-shadow: 0 0 20px #63636379;
+    overflow: hidden;
+}
+.about .box2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:linear-gradient(#7DF2AB,white);
+    box-shadow: 0 0 10px #7DF2AB;
+    border-radius: 50%;
+    right: -15%;
+    top: 10px;
+    z-index: -9999;
+    animation: ss 7s ease forwards  alternate;
+}
+.about .box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:linear-gradient(#7DF2AB,white);
+    box-shadow: 0 0 10px #7DF2AB;
+    border-radius: 50%;
+    left: -15%;
+    z-index: -9999;
+    animation: ss 7s ease forwards  alternate;
+}
+@keyframes ss {
+    from{
+        transform: translateY(0%) translateX(400%);
+    }
+    to {
+        transform: translateY(400%) rotate(360deg);
+    }
+}
+.about p{
+    --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 24px;
+    color: var(--firstColor);
+    padding: 1em 1em;
+}
+.about i {
+    color: var(--BrandColor);
+    animation: quote 1s ease forwards infinite alternate;
+}
+@keyframes quote {
+    from{
+        transform: translateY(-5px);
+    }
+}
+.about p span {
+    color: var(--BrandColor);
+    font-style: italic;
+}
 
+.hr {
+    width: 90%;
+    height: 3px;
+    margin:0 auto;
+    background-color: black;
+}
 
+.footer{
+    width: 100%;
+    height: 20vh;
+    position: relative;
+}
+.footer .scroll {
+    position: absolute;
+    font-size: 40px;
+    color: var(--BrandColor);
+    right: 10%;
+    top: 10%;
+    animation: tops 2s forwards infinite alternate;
+}
+@keyframes tops {
+    from {
+        opacity: 0.3;
+        transform: translateY(30px);
+    }
+}
 
+.footer ul li{
+    list-style: none;
+}
+.footer ul {
+    padding: 0;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: var(--firstColor);
+    transition: all 0.4s;
+    font-size: 18px;
+}
+.footer ul li a:hover{
+    color: rgb(68, 68, 68);
+    padding-left: 5px;
+}
 
 @media (max-width:700px){
     .home .color {
@@ -722,6 +819,15 @@ ul li a:hover{
     .project .color4 {
         width: 40%;
         left: 30%;
+    }
+    .footer ul li a{
+        font-size: 12px;
+    }
+    .about p{
+        --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
+        font-size: 14px;
+        color: var(--firstColor);
+        padding: 1em 1em;
     }
 }
 
