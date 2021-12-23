@@ -14,6 +14,11 @@
     font-family: var(--fontFamily) ;
 }
 
+*::selection{
+    background-color: #7DF2AB;
+    color: var(--firstColor);
+}
+
 html {
     overflow-x: hidden;
 }
@@ -28,6 +33,7 @@ body {
 .cursor {
     width: 40px;
     height: 40px;
+    background: linear-gradient(#7DF2AB,white);
     border: 1px solid #7DF2AB;
     border-radius: 50%;
     position: absolute;
@@ -58,6 +64,7 @@ body {
 
     to {
         transform: scale(.7);
+        box-shadow: 0px 0 30px #7DF2AB;
     }
 }
 
@@ -183,7 +190,7 @@ nav ul li a:hover{
     transition:all 0.4s ease-in-out;
 }
 
-@media (max-width:800px){
+@media (max-width:950px){
     nav {
         justify-content: space-between;
         padding: 0 1.8em;
@@ -691,8 +698,7 @@ nav ul li a:hover{
 }
 .about .sd {
     position: relative;
-    z-index: 999999;
-    box-shadow: 0 0 20px #63636379;
+    box-shadow: 0 0 40px #0000005d;
     overflow: hidden;
 }
 .about .box2 {
@@ -705,7 +711,7 @@ nav ul li a:hover{
     right: -15%;
     top: 10px;
     z-index: -9999;
-    animation: ss 7s ease forwards  alternate;
+    animation: ss 7s ease forwards   alternate;
 }
 .about .box {
     position: absolute;
@@ -834,7 +840,7 @@ nav ul li a:hover{
             transform: translateY(0%) translateX(400%);
         }
         to {
-            transform: translateY(100%) rotate(360deg);
+            transform: translateY(200%) rotate(360deg);
         }
     }
 }
