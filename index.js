@@ -23,6 +23,14 @@ document.addEventListener("click", () => {
   }, 500);
 });
 
+window.addEventListener("scroll", ()=>{
+
+  let header = document.querySelector("nav")
+
+  header.classList.toggle("sticky",window.scrollY>0)
+  nav.classList.toggle("stickyNav",window.scrollY>0)
+})
+
 ScrollReveal().reveal(".top", {
   origin: "top",
   duration: 2000,
@@ -64,11 +72,6 @@ tl.fromTo(
   { opacity: 0, y: "-100%" },
   { y: "0%", opacity: 1, duration: 1 }
 );
-tl.from(".home .txt", { opacity: 0, x: "-100%", duration: 0.6 });
-tl.from(".home .txt2", { x: "-100%", opacity: 0, duration: 1 });
-tl.from(".home span", { x: "-100%", opacity: 0, duration: 1 });
-tl.from(".home .txt3", { x: "-100%", opacity: 0, duration: 1 });
-tl.from(".home a", { x: "-100%", opacity: 0, duration: 0.6 });
 gsap.fromTo(
   ".sf",
   { x: "500", opacity: 0, rotation: "-120deg" },
@@ -80,3 +83,4 @@ gsap.fromTo(
     rotation: "0deg",
   }
 );
+
