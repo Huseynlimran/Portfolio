@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
 
 :root {
-    --firstColor : black;
-    --BrandColor: #7DF2AB;
+    --firstColor : white;
+    --BrandColor: rgb(93, 253, 93);
     --H1fontSize:2em;
     --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
 }
@@ -24,17 +24,15 @@ html {
 }
 
 body {
-    background:#969696;
-
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    background:#211f1f;
+    overflow:hidden;
+    scroll-behavior:smooth;
 }
 
 .cursor {
     width: 40px;
     height: 40px;
-    background: linear-gradient(#7DF2AB,white);
-    border: 1px solid #7DF2AB;
+    border: 1px solid var(--BrandColor);
     border-radius: 50%;
     position: absolute;
     transition-duration: 200ms;
@@ -55,6 +53,35 @@ body {
     top: -8px;
     left: -8px;
     animation: cursorAnim2 .5s infinite alternate;
+}
+.stickyNav {
+    top: 8vh;
+}
+
+.sticky {
+    height: 8vh;
+    backdrop-filter: blur(10.3px );
+    transition: all 0.4s;
+}
+.sticky .logo {
+    transition: all 0.4s;
+    display: none;
+}
+
+.sticky .logoMini{
+    display: block;
+    text-decoration: none;
+    font-size: 3em;
+    color: var(--BrandColor);
+    font-weight: bold;
+    transition: all 0.4s;
+}
+.sticky .logoMini span {
+    color: rgba(0, 0, 0, 0.76);
+    font-style: italic;
+}
+.sticky .logoMini:hover{
+    color: black;
 }
 
 @keyframes cursorAnim {
@@ -105,6 +132,8 @@ nav {
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.082);
     backdrop-filter: blur(2.3px );
+    transition: all 0.4s;
+
 }
 
 .logo {
@@ -117,7 +146,7 @@ nav {
     color: var(--firstColor);
 }
 .logo span {
-    color: var(--BrandColor);
+    color: var(--firstColor);
     font-weight: bold;
     font-size: 44px;
 }
@@ -132,6 +161,8 @@ nav ul {
     align-items: center;
     margin: 0;
 }
+
+
 nav ul li {
     list-style: none;
 }
@@ -207,7 +238,7 @@ nav ul li a:hover{
         height: 90vh;
         transform: translateX(100%);
         transition: all 0.5s ease-in-out;
-        background-color: #969696d8;
+        background-color: #211f1f93;
     }
     .burger {
         display: block;
@@ -279,24 +310,32 @@ nav ul li a:hover{
     width: 60%;
     height: 100%;
     border-radius: 20% 0 20% 0;
-    border: 6px solid rgb(0, 0, 0);
+    border: 6px solid var(--firstColor);
     top: 3.9%;
     left: -20%;
     z-index: -1;
     animation: Bore 2s forwards infinite alternate;
 }
 
+.home .colorTwo::after,
 .home .colorTwo {
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     border-radius:50%;
-    background: linear-gradient(#7df2ac9a ,white);
-    box-shadow: 0 0 55px #9ed3b3;
+    background: linear-gradient(lime ,rgb(255, 255, 132));
     top: 0;
     right: 15%;
     z-index: -2;
     animation: color3 2s forwards infinite alternate;
+}
+.home .colorTwo::after{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
 }
 
 @keyframes Bore {
@@ -375,9 +414,13 @@ nav ul li a:hover{
     padding-right: 10px;
 }
 
+.MySkills h1,p {
+    color: var(--firstColor);
+}
+
 .MySkills span {
     font-weight: bold;
-    color: black;
+    color: var(--firstColor);
 }
 
 .MySkills footer {
@@ -419,14 +462,25 @@ nav ul li a:hover{
 .project {
     position: relative;
 }
+.project .color4::after,
 .project .color4{
     position: absolute;
     width: 13%;
     height: 100%;
     z-index: -2;
-    background:linear-gradient(#7DF2AB 70%,#969696);
+    background:linear-gradient(var(--BrandColor) 70%,white);
     top: 5%;
     left: 43.4%;
+}
+.project .color4::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    z-index: -3;
 }
 
 .project .roomm {
@@ -696,6 +750,9 @@ nav ul li a:hover{
     transform: scale(1.1);
     
 }
+.about h2 {
+    color: var(--firstColor);
+}
 .about .sd {
     position: relative;
     box-shadow: 0 0 40px #0000005d;
@@ -705,8 +762,8 @@ nav ul li a:hover{
     position: absolute;
     width: 100px;
     height: 100px;
-    background:linear-gradient(#7DF2AB,white);
-    box-shadow: 0 0 10px #7DF2AB;
+    background:linear-gradient(var(--BrandColor),white);
+    box-shadow: 0 0 10px var(--BrandColor);
     border-radius: 50%;
     right: -15%;
     top: 10px;
@@ -717,8 +774,8 @@ nav ul li a:hover{
     position: absolute;
     width: 100px;
     height: 100px;
-    background:linear-gradient(#7DF2AB,white);
-    box-shadow: 0 0 10px #7DF2AB;
+    background:linear-gradient(var(--BrandColor),white);
+    box-shadow: 0 0 10px var(--BrandColor);
     border-radius: 50%;
     left: -15%;
     z-index: -9999;
@@ -753,10 +810,10 @@ nav ul li a:hover{
 }
 
 .hr {
-    width: 90%;
+    width: 95%;
     height: 3px;
     margin:0 auto;
-    background-color: black;
+    background:linear-gradient(var(--BrandColor),white);
 }
 
 .footer{
@@ -796,6 +853,26 @@ nav ul li a:hover{
     padding-left: 5px;
 }
 
+footer h3 {
+    color: var(--firstColor);
+}
+
+footer .logoMini{
+    display: block;
+    text-decoration: none;
+    font-size: 3em;
+    color: var(--BrandColor);
+    font-weight: bold;
+    transition: all 0.4s;
+}
+footer .logoMini span {
+    color: rgba(0, 0, 0, 0.76);
+    font-style: italic;
+}
+footer .logoMini:hover{
+    color: black;
+}
+
 @media (max-width:700px){
     .home .color {
         width: 90%;
@@ -806,8 +883,8 @@ nav ul li a:hover{
         width: 200px;
         height: 200px;
         border-radius:50%;
-        background: linear-gradient(#7df2ac9a ,white);
-        top: 5%;
+        background:linear-gradient(lime ,rgb(255, 255, 132));
+        top: 1%;
         right: -100px;
         z-index: -2;
         animation: color2 2s forwards infinite alternate;
