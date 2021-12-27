@@ -232,6 +232,9 @@ nav ul li a:hover{
     .sticky {
         height: 10vh;
     }
+    .stickyNav {
+        top: 10vh;
+    }
     nav ul{
         position: absolute;
         display: flex;
