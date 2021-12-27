@@ -26,9 +26,13 @@ document.addEventListener("click", () => {
 window.addEventListener("scroll", ()=>{
 
   let header = document.querySelector("nav")
+  let mypro = document.querySelector(".mypj")
+  let mypro1 = document.querySelector(".mypj1")
 
   header.classList.toggle("sticky",window.scrollY>0)
   nav.classList.toggle("stickyNav",window.scrollY>0)
+  mypro.classList.toggle("lolio",window.scrollY>1400)
+  mypro1.classList.toggle("lolio1",window.scrollY>1400)
 })
 
 ScrollReveal().reveal(".top", {
