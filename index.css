@@ -237,7 +237,7 @@ nav ul li a:hover{
         width: 50%;
         height: 90vh;
         transform: translateX(100%);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
         background-color: #211f1f93;
     }
     .burger {
@@ -269,17 +269,19 @@ nav ul li a:hover{
 }
 
 .toggle .line1 {
-    transform: translateX(10px);
-    background-color: white;
-}
-.toggle .line2 {
-    transform: translateX(10px);
-    width: 14px;
-    background-color: #7DF2AB;
-}
-.toggle .line3 {
-    transform: translateX(-10px);
-}
+    width: 30px;
+    transform: rotate(45deg) translateY(14px);
+    background-color: var(--BrandColor);
+  }
+  .toggle .line2 {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  .toggle .line3 {
+    width: 30px;
+    transform: rotate(315deg) translateY(-14px);
+  }
+
 
 
 
