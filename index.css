@@ -879,7 +879,23 @@ footer .logoMini:hover{
     color: black;
 }
 
+.front i {
+    font-size: 7em;
+    color: var(--BrandColor);
+    cursor: pointer;
+    transition: all 0.4s;
+    animation: fro 2s ease forwards infinite alternate;
+}
+.front i:hover{
+    color: white;
+}
+
+
+
 @media (max-width:700px){
+    .front i{
+        font-size: 4em;
+    }
     .home .color {
         width: 90%;
         height: 70%;
