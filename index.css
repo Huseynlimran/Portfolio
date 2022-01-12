@@ -99,35 +99,7 @@ body {
     border: 1px solid rgb(255, 255, 255);
 }
 
-.stickyNav {
-    top: 8vh;
-}
 
-.sticky {
-    height: 8vh;
-    backdrop-filter: blur(10.3px );
-    transition: all 0.4s;
-}
-.sticky .logo {
-    transition: all 0.4s;
-    display: none;
-}
-
-.sticky .logoMini{
-    display: block;
-    text-decoration: none;
-    font-size: 3em;
-    color: var(--BrandColor);
-    font-weight: bold;
-    transition: all 0.4s;
-}
-.sticky .logoMini span {
-    color: rgba(0, 0, 0, 0.76);
-    font-style: italic;
-}
-.sticky .logoMini:hover{
-    color: black;
-}
 nav {
     display: flex;
     justify-content: space-around;
@@ -153,9 +125,26 @@ nav {
     font-weight: bold;
     font-size: 44px;
 }
-.logoMini {
+
+.logo {
     display: none;
 }
+.logoMini{
+    display: block;
+    text-decoration: none;
+    font-size: 3em;
+    color: var(--BrandColor);
+    font-weight: bold;
+    transition: all 0.4s;
+}
+.logoMini span {
+    color: rgba(0, 0, 0, 0.76);
+    font-style: italic;
+}
+.logoMini:hover{
+    color: black;
+}
+
 
 nav ul {
     width: 60%;
@@ -229,12 +218,7 @@ nav ul li a:hover{
         justify-content: space-between;
         padding: 0 1.8em;
     }
-    .sticky {
-        height: 10vh;
-    }
-    .stickyNav {
-        top: 10vh;
-    }
+
     nav ul{
         position: absolute;
         display: flex;
@@ -253,24 +237,7 @@ nav ul li a:hover{
         display: block;
     }
 
-    .logo {
-        display: none;
-    }
-    .logoMini{
-        display: block;
-        text-decoration: none;
-        font-size: 3em;
-        color: var(--BrandColor);
-        font-weight: bold;
-        transition: all 0.4s;
-    }
-    .logoMini span {
-        color: rgba(0, 0, 0, 0.76);
-        font-style: italic;
-    }
-    .logoMini:hover{
-        color: black;
-    }
+    
 
 }
 
