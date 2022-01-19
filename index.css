@@ -731,6 +731,7 @@ nav ul li a:hover{
     box-shadow: 0 0 40px #0000005d;
     overflow: hidden;
     backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
 }
 .about .box2 {
     position: absolute;
