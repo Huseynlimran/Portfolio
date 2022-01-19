@@ -730,6 +730,7 @@ nav ul li a:hover{
     position: relative;
     box-shadow: 0 0 40px #0000005d;
     overflow: hidden;
+    backdrop-filter: blur(2rem);
 }
 .about .box2 {
     position: absolute;
@@ -767,6 +768,15 @@ nav ul li a:hover{
     font-size: 24px;
     color: var(--firstColor);
     padding: 1em 1em;
+}
+.about {
+    position: relative;
+}
+.about .ki {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 .about i {
     color: var(--BrandColor);
