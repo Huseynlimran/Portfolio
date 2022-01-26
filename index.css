@@ -157,6 +157,8 @@ nav ul {
 
 nav ul li {
     list-style: none;
+    transition-delay: 1s;
+
 }
 nav ul li a {
     text-decoration: none;
@@ -165,6 +167,7 @@ nav ul li a {
     font-size: 1.8em;
     letter-spacing: 2px;
     position: relative;
+    transition: all 1s;
 }
 nav ul li a::after{
     content: '';
@@ -243,6 +246,20 @@ nav ul li a:hover{
 
 .nav-active {
     transform: translateX(0%);
+}
+
+.nav-active li {
+    animation: anima 1s ease;
+}
+@keyframes anima {
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+    opacity: 1;
+    }
 }
 
 .toggle .line1 {
