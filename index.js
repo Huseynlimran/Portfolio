@@ -1,3 +1,19 @@
+// const myData = document.querySelector("#data");
+
+// let datas = fetch("data.json")
+//   .then((response) => response.json())
+//   .then((transfer) => {
+//     transfer.forEach((element) => {
+//       myData.innerHTML += `<div class="col-md-3 col-6 sol mt-md-0 px-0">
+//            <div class="muncim">
+//            <img src="${element.img}" class="img-fluid " alt="">
+//            <a href="${element.link}" class="muncimLink" target="_blank">Visit my
+//             project</a>
+//            </div>
+//         </div>`;
+//     });
+//   });
+
 const nav = document.querySelector(".nav-links");
 const burger = document.querySelector(".burger");
 
@@ -22,8 +38,6 @@ document.addEventListener("click", () => {
     cursor.classList.remove("expand");
   }, 500);
 });
-
-
 
 ScrollReveal().reveal(".top", {
   origin: "top",
@@ -77,4 +91,3 @@ gsap.fromTo(
     rotation: "0deg",
   }
 );
-
