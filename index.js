@@ -14,6 +14,22 @@
 //     });
 //   });
 
+const boxe = document.querySelectorAll(".boxoso #layer");
+boxe.forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    element.classList.add("active2");
+    gsap.fromTo(".active2", {
+      duration: 0.1,
+      scaleY: 2,
+      ease: "elastic.out(2, 0.4)",
+    },{duration:2,scaleY:1, ease:"elastic.out(3, 0.4"});
+    setTimeout(() => {
+      element.classList.remove("active2");
+    }, 300);
+  });
+});
+
+
 const nav = document.querySelector(".nav-links");
 const burger = document.querySelector(".burger");
 
@@ -22,14 +38,7 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("toggle");
 });
 
-const cursor = document.querySelector(".cursor");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-  );
-});
 
 document.addEventListener("click", () => {
   cursor.classList.add("expand");
@@ -38,6 +47,15 @@ document.addEventListener("click", () => {
     cursor.classList.remove("expand");
   }, 500);
 });
+
+// const cursor = document.querySelector(".cursor");
+
+// document.addEventListener("mousemove", (e) => {
+//   cursor.setAttribute(
+//     "style",
+//     "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+//   );
+// });
 
 ScrollReveal().reveal(".top", {
   origin: "top",
@@ -56,6 +74,7 @@ ScrollReveal().reveal(".left", {
   origin: "left",
   duration: 2000,
   distance: "5rem",
+  interval: 100,
   opacity: 0,
 });
 
@@ -68,9 +87,9 @@ ScrollReveal().reveal(".sag", {
 });
 ScrollReveal().reveal(".sol", {
   origin: "left",
-  duration: 1000,
+  duration: 100,
   distance: "1rem",
-  interval: 200,
+  interval: 100,
   opacity: 0,
 });
 
