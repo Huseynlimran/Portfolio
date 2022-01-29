@@ -30,6 +30,15 @@ body {
     padding-bottom: 2em;
 }
 
+#layer {
+    font-size: 1em;
+    transition: all 0.2s ease-out;
+}
+
+.active2 {
+    color: var(--BrandColor);
+}
+
 
 .cursor {
     width: 40px;
@@ -280,11 +289,7 @@ nav ul li a:hover{
 .home h1{
     color: var(--firstColor);
 }
-.home h1 span {
-    font-weight: bold;
-    color: var(--BrandColor);
-    animation: anime2 2s forwards infinite alternate;
-}
+
 
 @keyframes anime2 {
     from{
