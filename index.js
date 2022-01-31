@@ -14,6 +14,23 @@
 //     });
 //   });
 
+
+
+
+// intro
+
+
+const sg = gsap.timeline({default: {ease: 'power1.out'}})
+
+sg.to(".text", { y: "0%",duration: 1.5, stagger: 0.25})
+
+sg.to('.slider', {y : "-100%", duration : 1.5, delay:0.5})
+sg.to('.intro', {y : "-100%", duration: 1}, "-=1")
+sg.fromTo('nav',{opacity :0}, {opacity:1, duration: 1}) 
+
+
+
+
 const boxe = document.querySelectorAll(".boxoso #layer");
 boxe.forEach((element) => {
   element.addEventListener("mouseover", () => {
@@ -28,6 +45,7 @@ boxe.forEach((element) => {
     }, 300);
   });
 });
+
 
 
 const nav = document.querySelector(".nav-links");
