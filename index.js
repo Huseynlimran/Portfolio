@@ -112,11 +112,7 @@ ScrollReveal().reveal(".sol", {
 });
 
 const tl = gsap.timeline({ default: { ease: "" } });
-tl.fromTo(
-  "nav",
-  { opacity: 0, y: "-100%" },
-  { y: "0%", opacity: 1, duration: 1 }
-);
+
 gsap.fromTo(
   ".sf",
   { x: "500", opacity: 0, rotation: "-120deg" },
