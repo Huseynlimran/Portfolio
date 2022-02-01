@@ -57,7 +57,7 @@ burger.addEventListener("click", () => {
 });
 
 
-
+const cursor = document.querySelector(".cursor");
 document.addEventListener("click", () => {
   cursor.classList.add("expand");
 
