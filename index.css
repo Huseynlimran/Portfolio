@@ -173,7 +173,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--firstColor);
     font-weight: 600;
-    font-size: 1.8em;
+    font-size: 1.3em;
     letter-spacing: 2px;
     position: relative;
     transition: all 1s;
@@ -518,8 +518,8 @@ nav ul li a:hover{
     position: relative;
     box-shadow: 0 0 40px #0000005d;
     overflow: hidden;
-    backdrop-filter: blur(3.3px);
-    -webkit-backdrop-filter: blur(3.3px);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
 }
 .about .box2 {
     position: absolute;
