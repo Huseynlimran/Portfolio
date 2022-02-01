@@ -57,16 +57,15 @@ burger.addEventListener("click", () => {
 });
 
 
-const cursor = document.querySelector(".cursor");
-document.addEventListener("click", () => {
-  cursor.classList.add("expand");
-
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
-
 // const cursor = document.querySelector(".cursor");
+// document.addEventListener("click", () => {
+//   cursor.classList.add("expand");
+
+//   setTimeout(() => {
+//     cursor.classList.remove("expand");
+//   }, 500);
+// });
+
 
 // document.addEventListener("mousemove", (e) => {
 //  cursor.setAttribute(
