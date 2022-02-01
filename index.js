@@ -24,10 +24,9 @@ const sg = gsap.timeline({default: {ease: 'power1.out'}})
 
 sg.to(".text", { y: "0%",duration: 1.5, stagger: 0.25})
 
-sg.to('.slider', {y : "-100%", duration : 1.5, delay:0.5})
-sg.to('.intro', {y : "-100%", duration: 1}, "-=1")
-sg.fromTo('nav',{opacity :0}, {opacity:1, duration: 1}) 
-
+sg.to('.slider', { duration : 1.5,scale:0.1,opacity:0.1, delay:0.5})
+sg.to('.intro', {scale:5.1,opacity:0, duration: 1}, "-=1")
+sg.fromTo('nav',{opacity :0}, {opacity:1, duration: 1});
 
 
 
