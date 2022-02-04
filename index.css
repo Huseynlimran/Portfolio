@@ -52,6 +52,17 @@ body {
     pointer-events: none;
 }
 
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.7);
+        box-shadow: 0px 0 30px #7DF2AB;
+    }
+}
+
 .cursor::after {
     content: "";
     width: 20px;
@@ -67,16 +78,7 @@ body {
 }
 
 
-@keyframes cursorAnim {
-    from {
-        transform: scale(1);
-    }
 
-    to {
-        transform: scale(.7);
-        box-shadow: 0px 0 30px #7DF2AB;
-    }
-}
 
 @keyframes cursorAnim2 {
     from {
@@ -87,6 +89,13 @@ body {
         transform: scale(.4);
     }
 }
+
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(255, 255, 255);
+}
+
 
 @keyframes cursorAnim3 {
     0% {
@@ -103,15 +112,10 @@ body {
     }
 }
 
-.expand {
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid rgb(255, 255, 255);
-}
-
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.082);
@@ -142,6 +146,7 @@ nav {
     display: block;
     text-decoration: none;
     font-size: 3em;
+    margin-left: 6%;
     color: var(--BrandColor);
     font-weight: bold;
     transition: all 0.4s;
@@ -183,7 +188,7 @@ nav ul li a::after{
     position: absolute;
     bottom: -8px;
     left: 0;
-    background-color: #7DF2AB;
+    background-color: var(--BrandColor);
     width: 0%;
     height: 0px;
     transition:all 0.4s;
@@ -680,17 +685,12 @@ footer .logoMini:hover{
     animation: close 4s ease forwards;
     animation-delay: 3s;
 }
-@keyframes close {
-    from{
-        border-top: 200px solid black;
-    }
-    to{
-        border-top: 40px solid black;
-    }
-}
+
 .eye:hover{
     border-top: 72px solid black;
 }
+
+
 .bebek{
     width: 40px;
     position: absolute;
