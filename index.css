@@ -377,35 +377,39 @@ nav ul li a:hover{
     cursor: pointer;
     font-size: 1.5em;
     padding: 10px 50px;
-    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
     border: 1px solid var(--BrandColor);
 }
 
-.home .cnt::before{
-    transform: scale(0);
-    transform-origin: center right;
-
-}
-
-.home .cnt:hover::before{
-    transform: scale(1);
-    transform-origin: center left;
-}
-.home .cnt::before{
+.home .cnt::after{
     content: '';
-    display: block;
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -120%;
     background-color: var(--BrandColor);
+    transform: skewX(-25deg);
+    transition: all 0.4s ease-in ;
     z-index: -1;
-    transition: transform .4s ease;
+
 }
+.home .cnt:hover::after{
+    transform: skew(0deg);
+    left: 100%;
+}
+
 
 
 
 .home {
     position: relative;
     
+}
+
+.home #layer{
+    z-index: 999;
 }
 
 .home i {
@@ -679,16 +683,29 @@ footer .logoMini:hover{
     display: inline-block;
     background-color: transparent;
     border:  3px solid black;
+    border-top: none;
     border-radius: 50%;
     transition: all 0.5s ease;
-    border-top: 40px solid black;
     animation: close 4s ease forwards;
     animation-delay: 3s;
+    overflow: hidden;
 }
 
-.eye:hover{
-    border-top: 72px solid black;
+.eye::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform: translateY(-100%);
+    transition: all 1s;
 }
+.eye:hover::after{
+    transform: translateY(-70%);
+}
+
 
 
 .bebek{
@@ -799,13 +816,14 @@ footer .logoMini:hover{
 }
 
 .intro-text {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     z-index: 9999999;
     padding: 0;
     margin: 0;
 }
 .hide .fontt {
+    color: white;
     font-size: 3rem;
     z-index: 9999999;
 
