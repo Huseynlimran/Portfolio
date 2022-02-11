@@ -802,8 +802,8 @@ footer .logoMini:hover{
     color: aliceblue;
     font-size: 3rem;
     z-index: 9999999;
-
-
+    padding: 0;
+    margin: 0;
 }
 .hide .fontt {
     font-size: 3rem;
@@ -819,7 +819,8 @@ footer .logoMini:hover{
 
 }
 .hide span {
-    transform: translateY(100%);
+    transform: rotateX(180deg);
+    opacity: 0;
     display: inline-block;
     z-index: 9999999;
 
