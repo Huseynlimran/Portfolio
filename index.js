@@ -79,6 +79,12 @@ sg.fromTo(
   "-=1"
 );
 
+// var rule = CSSRulePlugin.getRule(".eye:hover::after"); //get the rule
+
+// gsap.from(rule, {transfomr: 'translateY(0%)', color: "white"});
+
+
+
 const boxe = document.querySelectorAll(".boxoso #layer");
 boxe.forEach((element) => {
   element.addEventListener("mouseover", () => {
