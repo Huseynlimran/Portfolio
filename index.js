@@ -53,9 +53,9 @@ burger.addEventListener("click", () => {
 
 // intro
 
-const sg = gsap.timeline({ default: { ease: "power1.out" } });
+const sg = gsap.timeline({default: {ease: 'power1.out'}})
 
-sg.to(".text", { y: "0%", duration: 1.5, stagger: 0.25 });
+sg.to(".text", {rotateX:"0deg",duration:.5,opacity:.7, stagger:.1})
 
 sg.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 sg.to(".intro", { y: "-100%", duration: 1 }, "-=1");
