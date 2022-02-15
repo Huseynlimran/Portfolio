@@ -22,6 +22,17 @@
 html {
     overflow-x: hidden;
 }
+html::-webkit-scrollbar{
+    width:.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--BrandColor);
+}
 
 body {
     background:#211f1f;
@@ -380,28 +391,16 @@ nav ul li a:hover{
     position: relative;
     overflow: hidden;
     border: 1px solid var(--BrandColor);
+    background-image: linear-gradient(90deg,var(--BrandColor),var(--BrandColor));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
 }
-
-.home .cnt::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -120%;
-    background-color: var(--BrandColor);
-    transform: skewX(-25deg);
-    transition: all 0.4s ease-in ;
-    z-index: -1;
-
+.home .cnt:hover{
+        background-size: 100% 100%;
+        background-position-x: left;
 }
-.home .cnt:hover::after{
-    transform: skew(0deg);
-    left: 100%;
-}
-
-
-
 
 .home {
     position: relative;
