@@ -30,7 +30,6 @@ const navLinks = document.querySelectorAll(".nav-links li");
 burger.addEventListener("click", () => {
   nav.classList.toggle("nav-active");
   burger.classList.toggle("toggle");
-
 });
 
 // const cursor = document.querySelector(".cursor");
@@ -53,9 +52,9 @@ burger.addEventListener("click", () => {
 
 // intro
 
-const sg = gsap.timeline({default: {ease: 'power1.out'}})
+const sg = gsap.timeline({ default: { ease: "power1.out" } });
 
-sg.to(".text", {rotateX:"0deg",duration:.5,opacity:.7, stagger:.1})
+sg.to(".text", { rotateX: "0deg", duration: 0.2, opacity: 0.7, stagger: 0.1 });
 
 sg.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 sg.to(".intro", { y: "-100%", duration: 1 }, "-=1");
@@ -67,23 +66,23 @@ sg.fromTo(
   "-=1"
 );
 sg.fromTo(
+  ".sol",{scaleY: 1.5,opacity:0,ease: "elastic.out(2, 0.4)"},{opacity:1, scaleY: 1, ease: "elastic.out(3, 0.4",stagger:.1 },"-=2");
+sg.fromTo(
   ".mensi1",
   { "border-top": "200px solid black", opacity: 0, y: "-15%" },
   { "border-top": "40px solid black", opacity: 1, duration: 1, y: "0%" },
-  "-=1"
+  "-=3"
 );
 sg.fromTo(
   ".mensi2",
   { "border-top": "200px solid black", opacity: 0, y: "-15%" },
   { "border-top": "40px solid black", opacity: 1, duration: 1, y: "0%" },
-  "-=1"
+  "-=3"
 );
 
 // var rule = CSSRulePlugin.getRule(".eye:hover::after"); //get the rule
 
 // gsap.from(rule, {transfomr: 'translateY(0%)', color: "white"});
-
-
 
 const boxe = document.querySelectorAll(".boxoso #layer");
 boxe.forEach((element) => {
@@ -119,7 +118,7 @@ ScrollReveal().reveal(".bottom", {
 });
 ScrollReveal().reveal(".left", {
   origin: "left",
-  duration: 2000,
+  duration: 1500,
   distance: "5rem",
   interval: 100,
   opacity: 0,
@@ -130,13 +129,6 @@ ScrollReveal().reveal(".sag", {
   duration: 2000,
   distance: "5rem",
   interval: 300,
-  opacity: 0,
-});
-ScrollReveal().reveal(".sol", {
-  origin: "left",
-  duration: 100,
-  distance: "1rem",
-  interval: 100,
   opacity: 0,
 });
 
