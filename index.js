@@ -14,23 +14,25 @@
 //     });
 //   });
 
-const eye1 = document.querySelector(".eye1");
-const eye2 = document.querySelector(".eye2");
-window.addEventListener("mousemove", (evt) => {
-  const x = -(window.innerWidth / 1.5 - evt.pageX) / 10;
-  const y = -(window.innerHeight / 1.5 - evt.pageY) / 10;
-  eye1.style.transform = `translateY(${y}px) translateX(${x}px)`;
-  eye2.style.transform = `translateY(${y}px) translateX(${x}px)`;
-});
 
 const nav = document.querySelector(".nav-links");
 const burger = document.querySelector(".burger");
 const navLinks = document.querySelectorAll(".nav-links li");
+const linkHref = document.querySelectorAll(".linksNav")
 
-burger.addEventListener("click", () => {
-  nav.classList.toggle("nav-active");
-  burger.classList.toggle("toggle");
-});
+if(burger){
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    burger.classList.toggle("toggle");
+  });
+}
+
+function linkAction(){
+  nav.classList.remove("nav-active")
+  burger.classList.remove("toggle")
+}
+linkHref.forEach(n => n.addEventListener('click', linkAction))
+
 
 // const cursor = document.querySelector(".cursor");
 // document.addEventListener("click", () => {
@@ -51,6 +53,38 @@ burger.addEventListener("click", () => {
 // animation
 
 // intro
+
+document.body.addEventListener("mousemove", event =>{
+  const mouseX = event.clientX
+  const mouseY = event.clientY
+
+  gsap.set(".cursor",{
+    x: mouseX,
+    y: mouseY,
+    stagger: -0.1
+  })
+})
+
+document.body.addEventListener("click", event =>{
+  
+  let cursor = document.querySelector(".cursor")
+
+  cursor.classList.add("expand")
+
+  setTimeout(() => {
+    cursor.classList.remove("expand")
+  }, 300);
+})
+
+
+const eye1 = document.querySelector(".eye1");
+const eye2 = document.querySelector(".eye2");
+window.addEventListener("mousemove", (evt) => {
+  const x = -(window.innerWidth / 1.5 - evt.pageX) / 10;
+  const y = -(window.innerHeight / 1.5 - evt.pageY) / 10;
+  eye1.style.transform = `translateY(${y}px) translateX(${x}px)`;
+  eye2.style.transform = `translateY(${y}px) translateX(${x}px)`;
+});
 
 const sg = gsap.timeline({ default: { ease: "power1.out" } });
 
@@ -97,9 +131,12 @@ boxe.forEach((element) => {
       },
       { duration: 2, scaleY: 1, ease: "elastic.out(3, 0.4" }
     );
-    setTimeout(() => {
-      element.classList.remove("active2");
-    }, 300);
+    element.addEventListener("mouseup", ()=>{
+      element.classList.add("active2")
+    })
+    element.addEventListener("mouseleave", ()=>{
+      element.classList.remove("active2")
+    })
   });
 });
 
