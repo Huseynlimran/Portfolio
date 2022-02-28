@@ -34,6 +34,17 @@ function linkAction(){
 linkHref.forEach(n => n.addEventListener('click', linkAction))
 
 
+
+
+document.querySelector(".scroll").addEventListener("click", (e)=>{
+  e.preventDefault();
+  document.body.scrollIntoView({
+    block:'start',
+    inline:'start',
+    behavior:'smooth'
+  })
+})
+
 // const cursor = document.querySelector(".cursor");
 // document.addEventListener("click", () => {
 //   cursor.classList.add("expand");
@@ -58,7 +69,7 @@ document.body.addEventListener("mousemove", event =>{
   const mouseX = event.clientX
   const mouseY = event.clientY
 
-  gsap.set(".cursor",{
+  gsap.to(".cursor",{
     x: mouseX,
     y: mouseY,
     stagger: -0.1
@@ -86,6 +97,19 @@ window.addEventListener("mousemove", (evt) => {
   eye2.style.transform = `translateY(${y}px) translateX(${x}px)`;
 });
 
+// const myList = document.querySelectorAll(".listLi")
+
+// console.log(myList)
+
+// myList.forEach(list=>{
+//   list.addEventListener("click", (e)=>{
+//     [ ... myList].map(list => list.classList.remove("activeLinks"))
+//     list.classList.add("activeLinks")
+//   })
+// })
+
+
+
 const sg = gsap.timeline({ default: { ease: "power1.out" } });
 
 sg.to(".text", { rotateX: "0deg", duration: 0.2, opacity: 0.7, stagger: 0.1 });
@@ -93,6 +117,7 @@ sg.to(".text", { rotateX: "0deg", duration: 0.2, opacity: 0.7, stagger: 0.1 });
 sg.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
 sg.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 sg.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+sg.fromTo(".sag", { opacity: 0,x:"50%" }, {opacity: 1, duration: 1,x:"0",stagger:.5 },"-=1");
 sg.fromTo(
   ".linksNav",
   { y: "-50%", opacity: 0 },
@@ -113,6 +138,8 @@ sg.fromTo(
   { "border-top": "40px solid black", opacity: 1, duration: 1, y: "0%" },
   "-=3"
 );
+
+
 
 // var rule = CSSRulePlugin.getRule(".eye:hover::after"); //get the rule
 
@@ -140,6 +167,13 @@ boxe.forEach((element) => {
   });
 });
 
+ScrollReveal().reveal(".lefts", {
+  origin: "left",
+  duration: 2000,
+  distance: "5rem",
+  interval: 100,
+  opacity: 0,
+});
 ScrollReveal().reveal(".top", {
   origin: "top",
   duration: 2000,
@@ -154,20 +188,21 @@ ScrollReveal().reveal(".bottom", {
   opacity: 0,
 });
 ScrollReveal().reveal(".left", {
-  origin: "left",
+  origin: "top",
   duration: 1500,
   distance: "5rem",
   interval: 100,
   opacity: 0,
+  reset:true
 });
 
-ScrollReveal().reveal(".sag", {
-  origin: "right",
-  duration: 2000,
-  distance: "5rem",
-  interval: 300,
-  opacity: 0,
-});
+// ScrollReveal().reveal(".sag", {
+//   origin: "right",
+//   duration: 2000,
+//   distance: "5rem",
+//   interval: 300,
+//   opacity: 0,
+// });
 
 // let path= document.querySelector("path")
 // let pathLength = path.getTotalLength()
