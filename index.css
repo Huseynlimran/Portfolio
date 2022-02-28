@@ -57,7 +57,7 @@ body {
     height: 40px;
     border: 1px solid var(--BrandColor);
     border-radius: 50%;
-    position: fixed;
+    position:fixed;
     z-index: 9999;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
@@ -239,7 +239,7 @@ nav ul li a:hover{
 @media (max-width:950px){
     nav {
         justify-content: space-between;
-        padding: 0 1.8em;
+        padding: 0 0.5rem;
     }
 
     nav ul{
@@ -313,7 +313,6 @@ nav ul li a:hover{
 
 .home {
     height: 100vh;
-    position: relative;
 }
 .home .color {
     position: absolute;
@@ -417,7 +416,10 @@ nav ul li a:hover{
     color: rgb(194, 194, 194);
     padding-right: 10px;
 }
+.MySkills{
+    scroll-margin-top: 60px;
 
+}
 .MySkills h1,p {
     color: var(--firstColor);
 }
@@ -465,6 +467,7 @@ nav ul li a:hover{
 
 .project {
     position: relative;
+    scroll-margin-top: 60px;
 }
 .project .color4{
     position: absolute;
@@ -513,7 +516,10 @@ nav ul li a:hover{
     
 }
 
+.about{
+    scroll-margin-top: 60px;
 
+}
 
 .about h2 {
     color: var(--firstColor);
@@ -717,6 +723,9 @@ footer .logoMini:hover{
 
 
 @media (max-width:700px){
+    .cursor{
+        display: none;
+    }
     .front i{
         font-size: 4em;
     }
