@@ -226,6 +226,7 @@ nav ul li a:hover{
 .burger{
     display: none;
     cursor: pointer;
+    padding-right: 10px;
 
 }
 .burger div {
