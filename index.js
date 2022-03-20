@@ -33,7 +33,16 @@ function linkAction(){
 }
 linkHref.forEach(n => n.addEventListener('click', linkAction))
 
+window.addEventListener("scroll", ()=>{
+  let navbar = document.querySelector("nav")
 
+  if(scrollY > 0){
+    navbar.classList.add("sticky")
+  }else{
+    navbar.classList.remove("sticky")
+  }
+
+})
 
 
 document.querySelector(".scroll").addEventListener("click", (e)=>{
