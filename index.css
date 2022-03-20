@@ -2,7 +2,7 @@
 
 :root {
     --firstColor : white;
-    --BrandColor: rgb(93, 253, 93);
+    --BrandColor: #5dfd5d;
     --H1fontSize:2em;
     --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
 }
@@ -124,10 +124,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    background-color: rgba(255, 255, 255, 0.082);
+    background-color: transparent;
     backdrop-filter: blur(2.3px );
     -webkit-backdrop-filter: blur(2.3px);
     transition: all 0.4s;
+}
+.sticky{
+    background-color: rgba(105, 105, 105, 0.418);
+
 }
 
 .logo {
@@ -249,7 +253,7 @@ nav ul li a:hover{
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        background-color: rgba(255, 255, 255, 0.082);
+        background-color: rgba(105, 105, 105, 0.418);
         backdrop-filter: blur(2.3px );
         -webkit-backdrop-filter: blur(2.3px);
         top: 10vh;
@@ -419,6 +423,7 @@ nav ul li a:hover{
 }
 .MySkills{
     scroll-margin-top: 60px;
+    margin-bottom: 10px;
 
 }
 .MySkills h1,p {
@@ -472,6 +477,14 @@ nav ul li a:hover{
 }
 .project .color4{
     position: absolute;
+    top: 0;
+    left: 43%;
+    font-weight: 500;
+    color: #211f1f;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 24px;
+    top: 0;
     width: 13%;
     height: 100%;
     border-radius: 30px 30px 0px 0;
@@ -479,10 +492,12 @@ nav ul li a:hover{
     background:linear-gradient(var(--BrandColor) 70%,white);
     box-shadow: 0 0 50px var(  --BrandColor),
                 0 0 100px white;
-    top: 5%;
-    left: 43.4%;
 }
-
+@media (max-width:1038px){
+    .project .color4{
+        font-size: 16px;
+    }
+}
 .project .muncim {
     position: relative;
     overflow: hidden;
@@ -762,6 +777,7 @@ footer .logoMini:hover{
     .project .color4 {
         width: 40%;
         left: 30%;
+        font-size: 100%;
     }
     .footer ul li a{
         font-size: 12px;
