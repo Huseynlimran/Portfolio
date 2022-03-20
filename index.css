@@ -120,14 +120,16 @@ body {
 
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 10vh;
     background-color: transparent;
     backdrop-filter: blur(2.3px );
     -webkit-backdrop-filter: blur(2.3px);
     transition: all 0.4s;
+}
+nav .container-md{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .sticky{
     background-color: rgba(105, 105, 105, 0.418);
@@ -156,7 +158,6 @@ nav {
     display: block;
     text-decoration: none;
     font-size: 3em;
-    margin-left: 6%;
     color: var(--BrandColor);
     font-weight: bold;
     transition: all 0.4s;
@@ -230,8 +231,6 @@ nav ul li a:hover{
 .burger{
     display: none;
     cursor: pointer;
-    padding-right: 10px;
-
 }
 .burger div {
     width: 30px;
@@ -304,6 +303,13 @@ nav ul li a:hover{
 
 .home h1{
     color: var(--firstColor);
+}
+@media (min-width:771px){
+    .home .socials{
+        position: absolute;
+        right: 0;
+        top: 35%;
+    }
 }
 
 
@@ -479,11 +485,6 @@ nav ul li a:hover{
     position: absolute;
     top: 0;
     left: 43%;
-    font-weight: 500;
-    color: #211f1f;
-    text-align: center;
-    padding-top: 25px;
-    font-size: 24px;
     top: 0;
     width: 13%;
     height: 100%;
@@ -493,9 +494,16 @@ nav ul li a:hover{
     box-shadow: 0 0 50px var(  --BrandColor),
                 0 0 100px white;
 }
+.project .color4 h2{
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 26px;
+}
 @media (max-width:1038px){
-    .project .color4{
-        font-size: 16px;
+    .project .color4 h2{
+        font-size: 22px;
     }
 }
 .project .muncim {
