@@ -192,7 +192,7 @@ nav ul li a {
     font-size: 1.3em;
     letter-spacing: 2px;
     position: relative;
-    transition: all 1s;
+    transition: all 0.4s;
 }
 nav ul li a::after{
     content: '';
@@ -201,31 +201,18 @@ nav ul li a::after{
     left: 0;
     background-color: var(--BrandColor);
     width: 0%;
-    height: 0px;
+    height: 3px;
     transition:all 0.4s;
 }
 
-nav ul li a::before{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    right: 0;
-    background-color: var(--firstColor);
-    width: 0%;
-    height: 0px;
-    transition: all 0.4s;
-}
-nav ul li a:hover::before{
-    width: 50%;
-    height: 3px;
-}
+
+
 nav ul li a:hover::after{
-    width: 50%;
-    height: 3px;
+    width: 100%;
 }
 
 nav ul li a:hover{
-    color: rgb(255, 255, 255);
+    color: var(--BrandColor);
 }
 
 .burger{
