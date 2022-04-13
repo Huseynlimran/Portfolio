@@ -97,6 +97,7 @@ document.body.addEventListener("click", event =>{
 })
 
 
+
 const eye1 = document.querySelector(".eye1");
 const eye2 = document.querySelector(".eye2");
 window.addEventListener("mousemove", (evt) => {
@@ -153,6 +154,8 @@ sg.fromTo(
 // var rule = CSSRulePlugin.getRule(".eye:hover::after"); //get the rule
 
 // gsap.from(rule, {transfomr: 'translateY(0%)', color: "white"});
+
+
 
 const boxe = document.querySelectorAll(".boxoso #layer");
 boxe.forEach((element) => {
@@ -229,3 +232,35 @@ ScrollReveal().reveal(".left", {
 //   path.style.strokeDashoffset = pathLength-drawLength;
 
 // })
+
+
+
+
+const btnContact = document.querySelector(".btnContact")
+const succes = document.querySelector(".success")
+console.log(succes)
+
+btnContact.addEventListener("click", (e)=>{
+  e.preventDefault();
+  succes.classList.add("activeSucces")
+  setTimeout(() => {
+    succes.classList.remove("activeSucces")
+  }, 1500);
+  
+})
+
+
+
+
+
+function sendMail(params) {
+  var tempParams = {
+    from_name: document.getElementById("toEmail").value,
+    to_name : document.getElementById("toName").value,
+    message : document.getElementById("msg").value,
+  };
+  emailjs.send('service_f53gpjf','template_hrkb4b9',tempParams)
+  .then(function(res){
+    console.log("succes", res.status)
+  })
+}
