@@ -15,8 +15,8 @@
 }
 
 *::selection{
-    background-color: #7DF2AB;
-    color: var(--firstColor);
+    background-color: transparent;
+    color: var(--BrandColor);
 }
 
 html {
@@ -227,7 +227,7 @@ nav ul li a:hover{
     transition:all 0.4s ease-in-out;
 }
 
-@media (max-width:950px){
+@media (max-width:990px){
     nav {
         justify-content: space-between;
         padding: 0 0.5rem;
@@ -858,6 +858,135 @@ footer .logoMini:hover{
     z-index: 9999999;
 
 }
+
+.contact {
+    padding: 5% 0px;
+    position: relative;
+    scroll-margin-top: 60px;
+
+}
+.contact i {
+    color: var(--BrandColor);
+}
+.contact .btnContact{
+    text-decoration: none;
+    color: var(--firstColor);
+    cursor: pointer;
+    font-size: 1.1em;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 7px 15px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--BrandColor);
+    background-image: linear-gradient(90deg,var(--BrandColor),var(--BrandColor));
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    transition: background-size 500ms;
+    outline: none;
+}
+.contact .btnContact:hover{
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+.contact .cv{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.4s;
+}
+.contact .cntDownload{
+    animation: down 2s infinite alternate;
+}
+.contact .cv:hover{
+    color: var(--BrandColor);
+}
+@keyframes down {
+    from{
+        color: white;
+    }
+    to{
+        color: var(--BrandColor);
+    }
+}
+.contact  input{
+    transition: all 1.4s;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-color: #1a1a1a;
+}
+
+.contact .inputAni{
+    position: relative;
+    overflow: hidden;
+}
+.contact .inputAni span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left:-100%;
+    bottom: 0px;
+    background-color: var(--BrandColor);
+    transition: all 0.7s ease;
+}
+.contact .inputAni:hover span{
+    left: 0px;
+}
+
+
+.contact textarea{
+    background-color: #1a1a1a;
+    border: none;
+    outline: none;
+    padding: 5px 5px;
+}
+
+
+
+
+.succes{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(2em);
+    -webkit-backdrop-filter: blur(2em);
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+ .activeSucces  .succes  {
+    opacity: 1;
+    z-index: 99999;
+}
+ .succes .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    width: 200px;
+    height: 200px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+}
+.succes i {
+    font-size: 2em;
+}
+
+
 
 /* .line-container{
     position: fixed;
