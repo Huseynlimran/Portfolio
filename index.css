@@ -133,7 +133,6 @@ nav .container-md{
 }
 .sticky{
     background-color: rgba(105, 105, 105, 0.418);
-
 }
 
 .logo {
@@ -312,6 +311,7 @@ nav ul li a:hover{
 .home {
     height: 100vh;
 }
+
 .home .color {
     position: absolute;
     width: 60%;
@@ -337,7 +337,14 @@ nav ul li a:hover{
     z-index: -2;
     animation: color3 2s forwards infinite alternate;
 }
-
+.bg7{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    right: -15%;
+    bottom: 0;
+    z-index: -1;
+}
 
 @keyframes Bore {
     from{ 
@@ -399,6 +406,7 @@ nav ul li a:hover{
     
 }
 
+
 .home #layer{
     z-index: 999;
 }
@@ -417,7 +425,6 @@ nav ul li a:hover{
 .MySkills{
     scroll-margin-top: 60px;
     margin-bottom: 10px;
-
 }
 .MySkills h1,p {
     color: var(--firstColor);
@@ -528,6 +535,7 @@ nav ul li a:hover{
 }
 
 .about{
+    position: relative;
     scroll-margin-top: 60px;
 
 }
@@ -542,37 +550,7 @@ nav ul li a:hover{
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
 }
-.about .box2 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background:linear-gradient(var(--BrandColor),white);
-    box-shadow: 0 0 10px var(--BrandColor);
-    border-radius: 50%;
-    right: -15%;
-    top: 10px;
-    z-index: -9999;
-    animation: ss 7s ease forwards   alternate;
-}
-.about .box {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background:linear-gradient(var(--BrandColor),white);
-    box-shadow: 0 0 10px var(--BrandColor);
-    border-radius: 50%;
-    left: -15%;
-    z-index: -9999;
-    animation: ss 7s ease forwards  alternate;
-}
-@keyframes ss {
-    from{
-        transform: translateY(0%) translateX(400%);
-    }
-    to {
-        transform: translateY(400%) rotate(360deg);
-    }
-}
+
 .about p{
     --fontFamily : font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 24px;
@@ -582,12 +560,7 @@ nav ul li a:hover{
 .about {
     position: relative;
 }
-.about .ki {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
+
 .about i {
     color: var(--BrandColor);
     animation: quote 1s ease forwards infinite alternate;
@@ -665,6 +638,7 @@ footer .logoMini span {
 footer .logoMini:hover{
     color: black;
 }
+
 
 .front i {
     font-size: 7em;
@@ -863,34 +837,12 @@ footer .logoMini:hover{
     padding: 5% 0px;
     position: relative;
     scroll-margin-top: 60px;
-
 }
+
 .contact i {
     color: var(--BrandColor);
 }
-.contact .btnContact{
-    text-decoration: none;
-    color: var(--firstColor);
-    cursor: pointer;
-    font-size: 1.1em;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    padding: 7px 15px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--BrandColor);
-    background-image: linear-gradient(90deg,var(--BrandColor),var(--BrandColor));
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-position-x: right;
-    transition: background-size 500ms;
-    outline: none;
-}
-.contact .btnContact:hover{
-    background-size: 100% 100%;
-    background-position-x: left;
-}
+
 .contact .cv{
     text-decoration: none;
     color: white;
@@ -919,11 +871,29 @@ footer .logoMini:hover{
     outline: none;
     background-color: transparent;
     background-color: #1a1a1a;
+    box-shadow: 0px 4px 20px 0px #C1C1C14D;
+
 }
 
 .contact .inputAni{
     position: relative;
     overflow: hidden;
+}
+.contact .ki {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+@media(max-width:769px){
+    .contact .ki{
+        position: absolute;
+        width: 500px;
+        height: auto;
+        top:200px;
+        right: -120px;
+        z-index: -1;
+    }
 }
 .contact .inputAni span{
     position: absolute;
@@ -946,7 +916,34 @@ footer .logoMini:hover{
     padding: 5px 5px;
 }
 
+.strs{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: 0;
+    left: -25px;
+    z-index: -1;
+    animation: strs 3s ease-in-out infinite alternate;
+}
+@keyframes strs {
+    from{
+        transform: translateY(-40px) rotate(15deg);
+    }
+    to{
+        transform: translateY(20px);
 
+    }
+}
+@media(max-width:769px){
+    .strs{
+        position: absolute;
+        width: 200px;
+        height: auto;
+        top:300px;
+        right: -120px;
+        z-index: -1;
+    }
+}
 
 
 .succes{
@@ -1007,3 +1004,48 @@ svg {
 
 
 
+.bg10 {
+    position: absolute;
+    top: 150%;
+    z-index: -1;
+    transform: rotate(15deg);
+    fill: white;
+}
+
+
+.btnSend {
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--BrandColor);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--BrandColor);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    outline: none;
+   }
+   
+   button:hover {
+    color: var(--BrandColor);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+   }
+   
+   button:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+   }
+   
+   button:hover:before {
+    transform: translateX(15em);
+   }
