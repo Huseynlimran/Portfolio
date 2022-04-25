@@ -236,7 +236,7 @@ ScrollReveal().reveal(".left", {
 
 
 
-const btnContact = document.querySelector(".btnContact")
+const btnContact = document.querySelector(".btnSend")
 const succes = document.querySelector(".success")
 console.log(succes)
 
